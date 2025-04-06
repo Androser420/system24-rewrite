@@ -6,7 +6,7 @@
   letter-spacing: -0.05ch;
   font-weight: 300;
   --label-font-weight: 500;
-  --corner-text: 'system24';
+  --corner-text: 'system24-rewrite';
   --pad: 16px;
   --txt-pad: 10px;
   --panel-roundness: 0;
@@ -309,7 +309,7 @@
   }
 
   .bar_c38106::after {
-    content: "navigation";
+    content: var(--corner-text);
     justify-self: center
   }
 
@@ -336,7 +336,7 @@
   }
 
   .wrapper_ef3116::after {
-    content: "guilds"
+    content: "guild"
   }
 
   .privateChannels__35e86::after {
@@ -432,7 +432,7 @@
 
 @container scope style(--old-layout: on) {
   body {
-    --custom-app-top-bar-height: 0;
+    --custom-app-top-bar-height: var(--size-xl);
     --guildbar-avatar-size: 48px
   }
 
@@ -452,6 +452,27 @@
         border-radius: 25%;
         transition: border-radius 0.1s ease-out
       }
+    }
+
+    .bar_c38106 {
+      margin: unset;
+      padding: unset;
+      border: unset;
+
+      &::after {
+        display: none
+      }
+
+      &::before {
+        content: var(--corner-text);
+        margin-left: var(--space-sm);
+        color: var(--txt-2);
+        font-weight: 500
+      }
+    }
+
+    .trailing_c38106 {
+      gap: unset
     }
 
     .expandedFolderBackground__48112 {
@@ -476,8 +497,9 @@
       height: var(--size-24)
     }
 
-    .bar_c38106,
-    .gradientBackground__11664 {
+    .gradientBackground__11664,
+    .title__85643,
+    .winButtonsWithDivider_c38106:before {
       display: none
     }
 
