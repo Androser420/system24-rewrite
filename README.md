@@ -1,2 +1,2 @@
 # system24-rewrite
-experimental system24 rewrite for the new discord UI
+Fan-made [system24](https://github.com/refact0r/system24) rewrite for Discord's new UI.
