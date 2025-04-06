@@ -81,6 +81,7 @@
   .container__2637a,
   .container__7d20c,
   .container_c8ffbb,
+  .headerEllipseForeground_f37cb1,
   .member_c8ffbb,
   .members_c8ffbb,
   .nowPlayingColumn__133bf,
@@ -154,10 +155,6 @@
 
   .animatedContainer_f37cb1 {
     border-radius: var(--panel-roundness) var(--panel-roundness) 0 0
-  }
-
-  .headerEllipseForeground_f37cb1 {
-    top: 0
   }
 
   .scroller__7d20c {
@@ -279,6 +276,7 @@
     border-radius: unset !important
   }
 
+  .mask__68edb foreignObject,
   .wrapper__44b0c foreignObject {
     mask: unset
   }
@@ -311,6 +309,14 @@
       border-radius: 25%;
       transition: border-radius 0.1s ease-out
     }
+  }
+
+  .expandedFolderBackground__48112 {
+    left: var(--space-12) !important
+  }
+
+  .isExpanded__48112>ul {
+    height: unset !important
   }
 
   .visual-refresh {
@@ -359,6 +365,12 @@
     .gradientBackground__11664,
     .redGlow__67645 {
       background: none !important
+    }
+
+    .lowerBadge_cc5dd2,
+    .upperBadge_cc5dd2 {
+      box-shadow: 0 0 0 var(--size-4) var(--bg-0);
+      border-radius: 50%
     }
   }
 }
