@@ -132,11 +132,11 @@
   .container__2637a,
   .container__551b0,
   .container_a592e1,
-  .container_c8ffbb,
   .content_f75fb0>.outer_c0bea0,
   .form_f75fb0,
   .guilds_c48ade,
   .itemCard__7e549,
+  .membersWrap_c8ffbb,
   .messagesWrapper__36d07,
   .panels_c48ade,
   .privateChannels__35e86,
@@ -155,7 +155,9 @@
     }
   }
 
+  .backdrop__8a7fc,
   .members_c8ffbb,
+  .scroller__23746,
   .scroller__36d07,
   .scroller__629e4 {
     border-radius: var(--panel-roundness)
@@ -275,6 +277,106 @@
   .selected__91816 .childWrapper__6e9f8 {
     background: var(--acc-0) !important;
     color: var(--bg-0) !important
+  }
+
+  .bar_c38106::after,
+  .container__2637a::after,
+  .container__551b0::after,
+  .container_a592e1::after,
+  .form_f75fb0::after,
+  .membersWrap_c8ffbb::after,
+  .messagesWrapper__36d07::after,
+  .panels_c48ade::after,
+  .privateChannels__35e86::after,
+  .subtitleContainer_f75fb0::after,
+  .wrapper_ef3116::after {
+    display: block;
+    color: var(--txt-3);
+    font-weight: var(--label-font-weight);
+    position: absolute;
+    top: -10px;
+    left: 8px;
+    background-color: var(--bg-0);
+    padding: 0 4px;
+    z-index: 100;
+    transition: color var(--border-transition);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: fit-content;
+    right: var(--space-xs)
+  }
+
+  .bar_c38106::after {
+    content: "navigation";
+    justify-self: center
+  }
+
+  .privateChannels__35e86 {
+    min-height: 0
+  }
+
+  .container__551b0 {
+    position: relative;
+
+    &::after {
+      content: 'discover'
+    }
+  }
+
+  .chat_f75fb0,
+  .container__2637a,
+  .privateChannels__35e86,
+  .wrapper_ef3116 {
+    overflow: visible
+  }
+
+  .wrapper_ef3116::after {
+    content: "guilds"
+  }
+
+  .privateChannels__35e86::after {
+    content: "dms"
+  }
+
+  .container__2637a::after {
+    content: "server"
+  }
+
+  .panels_c48ade::after {
+    content: "user"
+  }
+
+  .subtitleContainer_f75fb0::after {
+    content: "channel"
+  }
+
+  .messagesWrapper__36d07::after {
+    content: "messages"
+  }
+
+  .form_f75fb0::after {
+    content: "input"
+  }
+
+  .membersWrap_c8ffbb::after {
+    content: "members"
+  }
+
+  .container_a592e1 {
+    position: relative;
+    padding: var(--space-xs);
+
+    &:has(.outerContainer_e1147e)::after {
+      content: 'apps'
+    }
+
+    &:has(.container_d08938)::after {
+      content: 'servers'
+    }
+
+    &:has(.container__955a3)::after {
+      content: 'quests'
+    }
   }
 }
 
