@@ -117,6 +117,7 @@
   .container__9293f,
   .container_c8ffbb,
   .header_f37cb1,
+  .homeWrapper__0920e,
   .panels_c48ade,
   .scrollableContainer__74017,
   .scroller__7d20c,
@@ -280,6 +281,7 @@
   }
 
   .bar_c38106::after,
+  .container__133bf::after,
   .container__2637a::after,
   .container__551b0::after,
   .container_a592e1::after,
@@ -311,8 +313,10 @@
     justify-self: center
   }
 
+  .container__133bf,
   .privateChannels__35e86 {
-    min-height: 0
+    min-height: 0;
+    min-width: 0
   }
 
   .container__551b0 {
@@ -324,6 +328,7 @@
   }
 
   .chat_f75fb0,
+  .container__133bf,
   .container__2637a,
   .privateChannels__35e86,
   .wrapper_ef3116 {
@@ -360,6 +365,14 @@
 
   .membersWrap_c8ffbb::after {
     content: "members"
+  }
+
+  .container__133bf {
+    position: relative;
+
+    &::after {
+      content: "friends"
+    }
   }
 
   .container_a592e1 {
