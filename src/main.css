@@ -318,6 +318,11 @@
       contain: unset
     }
 
+    .childWrapper__6e9f8>svg {
+      width: var(--space-30);
+      height: var(--space-30)
+    }
+
     .bar_c38106,
     .gradientBackground__11664 {
       display: none
