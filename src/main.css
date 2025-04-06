@@ -271,7 +271,16 @@
     --panel-roundness: 0 !important
   }
 
+  *,
+  ::-webkit-scrollbar-thumb {
+    border-radius: 0 !important
+  }
+
   .avatar_c19a55,
+  .embedImage__623de img,
+  .embedMedia__623de,
+  .expandedFolderBackground__48112,
+  .imageWrapper_af017a,
   .wrapper_ef3116 foreignObject {
     border-radius: unset !important
   }
@@ -312,7 +321,7 @@
   }
 
   .expandedFolderBackground__48112 {
-    left: var(--space-12) !important
+    left: var(--size-sm) !important
   }
 
   .isExpanded__48112>ul {
@@ -327,6 +336,11 @@
     .childWrapper__6e9f8>svg {
       width: var(--space-30);
       height: var(--space-30)
+    }
+
+    .circleIcon__5bc7e {
+      width: var(--size-24);
+      height: var(--size-24)
     }
 
     .bar_c38106,
