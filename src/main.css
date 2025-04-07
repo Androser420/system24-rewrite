@@ -69,6 +69,14 @@
 }
 
 .visual-refresh {
+  ::placeholder {
+    color: var(--txt-3) !important
+  }
+
+  ::selection {
+    color: var(--bg-0);
+    background: var(--txt-1)
+  }
 
   .actionButton_f8fa06,
   .applicationStore_f07d62,
@@ -84,8 +92,10 @@
   .container__551b0,
   .container__7d20c,
   .container_c8ffbb,
+  .contentRegionScroller__23e6b,
   .headerEllipseForeground_f37cb1,
   .homeWrapper__0920e,
+  .layer__960e4,
   .member_c8ffbb,
   .members_c8ffbb,
   .nowPlayingColumn__133bf,
@@ -99,7 +109,9 @@
   .shopScroll__6db1d,
   .shop__08415,
   .shop__6db1d,
+  .sidebarRegionScroller__23e6b,
   .sidebar_c48ade:after,
+  .standardSidebarView__23e6b,
   .tabBody__133bf,
   .themedBackground__74017,
   .themed__9293f,
@@ -108,6 +120,13 @@
   .wrapper_ef3116,
   .wrapper_fc8177 {
     background: unset
+  }
+
+  .childWrapper__6e9f8,
+  .circleIconButton__5bc7e,
+  .contentRegion__23e6b,
+  .content__908e2 {
+    background: var(--bg-1)
   }
 
   .channelTextArea__74017,
@@ -267,12 +286,6 @@
     }
   }
 
-  .childWrapper__6e9f8,
-  .circleIconButton__5bc7e,
-  .content__908e2 {
-    background: var(--bg-1)
-  }
-
   .childWrapper__6e9f8:hover,
   .circleIconButton__5bc7e:hover,
   .selected__91816 .childWrapper__6e9f8 {
@@ -396,7 +409,7 @@
 @property --unrounding {
   syntax: 'on | off';
   inherits: false;
-  initial-value: on
+  initial-value: off
 }
 
 @container scope style(--unrounding: on) {
