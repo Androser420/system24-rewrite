@@ -64,6 +64,7 @@
 
 .app__160d8,
 .container__01ae2.floating__01ae2,
+.outer_c0bea0:not([style*="hsla"])> :first-child,
 .visual-refresh .bg__960e4 {
   background: var(--bg-0)
 }
@@ -80,6 +81,7 @@
 
   .actionButton_f8fa06,
   .applicationStore_f07d62,
+  .channelAttachmentArea_b77158,
   .channelChatWrapper_cb9592,
   .channelTextArea_f75fb0,
   .chatContent_f75fb0,
@@ -92,6 +94,7 @@
   .container__551b0,
   .container__7d20c,
   .container_c8ffbb,
+  .container_fb64c9,
   .contentRegionScroller__23e6b,
   .headerEllipseForeground_f37cb1,
   .homeWrapper__0920e,
@@ -111,6 +114,7 @@
   .shop__6db1d,
   .sidebarRegionScroller__23e6b,
   .sidebar_c48ade:after,
+  .stackedBars__74017,
   .standardSidebarView__23e6b,
   .tabBody__133bf,
   .themedBackground__74017,
@@ -140,7 +144,8 @@
   .panels_c48ade,
   .scrollableContainer__74017,
   .scroller__7d20c,
-  .sidebarList_c48ade {
+  .sidebarList_c48ade,
+  .stackedBars__74017:not(:last-child) {
     border: unset;
     border-radius: unset
   }
@@ -298,6 +303,7 @@
   .container__2637a::after,
   .container__551b0::after,
   .container_a592e1::after,
+  .content_f75fb0>.outer_c0bea0::after,
   .form_f75fb0::after,
   .membersWrap_c8ffbb::after,
   .messagesWrapper__36d07::after,
@@ -378,6 +384,10 @@
 
   .membersWrap_c8ffbb::after {
     content: "members"
+  }
+
+  .content_f75fb0>.outer_c0bea0::after {
+    content: "profile"
   }
 
   .container__133bf {
