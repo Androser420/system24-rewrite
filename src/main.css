@@ -98,6 +98,7 @@
     --brand-600: var(--acc-2);
     --bg-brand: var(--brand-500);
     --text-primary: var(--txt-1);
+    --text-normal: var(--txt-1);
     --interactive-hover: var(--txt-1)
   }
 
@@ -165,6 +166,7 @@
     color: var(--white-500)
   }
 
+  .defaultColor__4bd52,
   .iconBadge__650eb {
     color: var(--txt-1)
   }
@@ -314,21 +316,26 @@
     width: calc(100% - var(--pad))
   }
 
+  .form_f75fb0 {
+    display: grid
+  }
+
   :has(.typing_b88801) {
 
     .jumpToPresentBar__0f481,
     .scroller__36d07 {
       bottom: var(--custom-chat-input-margin-bottom)
     }
+  }
 
-    .base_b88801 {
-      left: 0;
-      right: 0;
-      width: auto;
-      margin-left: var(--space-xs);
-      margin-right: var(--space-xs);
-      bottom: calc(var(--custom-channel-textarea-text-area-height) + var(--pad) + calc(var(--border-width) * 2))
-    }
+  .typing_b88801 {
+    position: relative;
+    overflow: hidden;
+    order: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: calc(calc(var(--custom-chat-input-margin-bottom) + var(--pad) + calc(var(--border-width)) * 2) / -1) var(--space-xs)
   }
 
   .bar_c38106::after,
