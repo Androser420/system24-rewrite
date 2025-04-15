@@ -69,6 +69,12 @@
   background: var(--bg-0)
 }
 
+h3[data-text-variant='heading-xxl/medium'] {
+  font-family: 'asciid';
+  font-size: 50px;
+  font-weight: 400
+}
+
 .visual-refresh {
   ::placeholder {
     color: var(--txt-3) !important
@@ -87,34 +93,44 @@
   .theme-darker,
   .theme-light,
   .theme-midnight {
-    --background-surface-high: var(--bg-1);
-    --background-secondary: var(--bg-1);
-    --background-secondary-alt: var(--bg-1);
+    --background-base-lowest: var(--bg-1);
     --background-mentioned: var(--mention-bg);
     --background-mentioned-hover: var(--mention-hover-overlay);
     --background-modifier-accent: var(--bg-3);
     --background-modifier-active: var(--active);
     --background-modifier-hover: var(--hover);
     --background-modifier-selected: var(--selected);
+    --background-primary: var(--bg-0);
+    --background-secondary: var(--bg-1);
+    --background-secondary-alt: var(--bg-1);
+    --background-surface-high: var(--bg-1);
+    --bg-brand: var(--brand-500);
+    --border-normal: var(--border-color);
+    --border-subtle: var(--border-color);
+    --brand-500: var(--acc-0);
+    --brand-530: var(--acc-0);
+    --brand-560: var(--acc-1);
+    --brand-600: var(--acc-2);
+    --button-secondary-background: var(--bg-2);
+    --button-secondary-background-active: var(--txt-3);
+    --button-secondary-background-disabled: var(--bg-1);
+    --button-secondary-background-hover: var(--bg-3);
+    --header-primary: var(--txt-1);
+    --header-secondary: var(--txt-2);
+    --input-background: var(--bg-1);
+    --interactive-hover: var(--txt-1);
+    --modal-background: var(--bg-1);
     --scrollbar-auto-thumb: var(--bg-1);
     --scrollbar-auto-track: transparent;
     --scrollbar-thin-thumb: var(--bg-1);
     --scrollbar-thin-track: transparent;
     --status-danger: var(--pink);
-    --white-500: var(--txt-dark);
-    --white: var(--bg-0);
-    --brand-500: var(--acc-0);
-    --brand-530: var(--acc-0);
-    --brand-560: var(--acc-1);
-    --brand-600: var(--acc-2);
-    --bg-brand: var(--brand-500);
     --text-brand: var(--brand-500);
-    --text-primary: var(--txt-1);
+    --text-link: var(--txt-link);
     --text-normal: var(--txt-1);
-    --interactive-hover: var(--txt-1);
-    --modal-background: var(--bg-1);
-    --border-normal: var(--border-color);
-    --border-subtle: var(--border-color)
+    --text-primary: var(--txt-1);
+    --white: var(--bg-0);
+    --white-500: var(--txt-dark)
   }
 
   .headerEllipseBackdrop_f37cb1,
@@ -156,7 +172,6 @@
   .shopScroll__6db1d,
   .shop__08415,
   .shop__6db1d,
-  .sidebarRegionScroller__23e6b,
   .sidebar_c48ade:after,
   .stackedBars__74017,
   .standardSidebarView__23e6b,
@@ -173,11 +188,6 @@
 
   .content__908e2 {
     background: var(--bg-0)
-  }
-
-  .childWrapper__6e9f8,
-  .contentRegion__23e6b {
-    background: var(--bg-1)
   }
 
   .mentioned__5126c:before {
@@ -202,9 +212,12 @@
   .header__551b0,
   .header_f37cb1,
   .homeWrapper__0920e,
+  .input__0f084,
+  .lookFilled__3f413,
   .panels_c48ade,
   .scrollableContainer__74017,
   .scroller__7d20c,
+  .searchBar__35e86,
   .sidebarList_c48ade,
   .stackedBars__74017:not(:last-child) {
     border: unset
@@ -248,6 +261,10 @@
 
   .divider__5126c {
     border-width: var(--border-width)
+  }
+
+  .separator_b3f026 {
+    height: var(--border-width)
   }
 
   .backdrop__8a7fc,
@@ -650,6 +667,11 @@
       ::-webkit-scrollbar {
         display: none
       }
+    }
+
+    .input__0f084,
+    .lookFilled__3f413 {
+      border-radius: unset
     }
   }
 }
