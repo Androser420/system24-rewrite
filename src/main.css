@@ -79,9 +79,9 @@
     background: var(--txt-1)
   }
 
-  &.theme-light,
   &.theme-dark,
   &.theme-darker,
+  &.theme-light,
   &.theme-midnight,
   .theme-dark,
   .theme-darker,
@@ -93,6 +93,9 @@
     --background-mentioned: var(--mention-bg);
     --background-mentioned-hover: var(--mention-hover-overlay);
     --background-modifier-accent: var(--bg-3);
+    --background-modifier-active: var(--active);
+    --background-modifier-hover: var(--hover);
+    --background-modifier-selected: var(--selected);
     --scrollbar-auto-thumb: var(--bg-1);
     --scrollbar-auto-track: transparent;
     --scrollbar-thin-thumb: var(--bg-1);
@@ -105,12 +108,18 @@
     --brand-560: var(--acc-1);
     --brand-600: var(--acc-2);
     --bg-brand: var(--brand-500);
+    --text-brand: var(--brand-500);
     --text-primary: var(--txt-1);
     --text-normal: var(--txt-1);
     --interactive-hover: var(--txt-1);
     --modal-background: var(--bg-1);
     --border-normal: var(--border-color);
     --border-subtle: var(--border-color)
+  }
+
+  .headerEllipseBackdrop_f37cb1,
+  .headerGlass_f37cb1 {
+    display: none
   }
 
   #vc-spotify-player,
@@ -198,8 +207,7 @@
   .scroller__7d20c,
   .sidebarList_c48ade,
   .stackedBars__74017:not(:last-child) {
-    border: unset;
-    border-radius: unset
+    border: unset
   }
 
   .applicationStore_f07d62,
@@ -235,8 +243,7 @@
   .embedFull__623de {
     border-top: transparent;
     border-right: transparent;
-    border-bottom: transparent;
-    border-radius: var(--panel-roundness)
+    border-bottom: transparent
   }
 
   .divider__5126c {
@@ -255,8 +262,17 @@
     border-radius: var(--panel-roundness) var(--panel-roundness) 0 0
   }
 
+  .container__9293f,
+  .title_f75fb0 {
+    padding: var(--space-xs)
+  }
+
   .scroller__7d20c {
     padding: var(--space-xs) !important
+  }
+
+  .form_f75fb0 {
+    padding: unset
   }
 
   .container_c8ffbb,
@@ -267,11 +283,6 @@
 
   .shop__6db1d {
     height: auto
-  }
-
-  .container__9293f,
-  .title_f75fb0 {
-    padding: var(--space-xs)
   }
 
   .container__37e49 {
@@ -285,10 +296,6 @@
   .container_a592e1,
   .shop__6db1d {
     margin: var(--pad)
-  }
-
-  .form_f75fb0 {
-    padding: unset
   }
 
   .channelTextArea_f75fb0.channelTextArea__74017,
@@ -325,6 +332,11 @@
 
   .slateTextArea_ec4baf {
     margin-left: unset
+  }
+
+  .animatedContainer_f37cb1 {
+    margin: var(--txt-pad);
+    width: calc(100% - calc(var(--txt-pad)*2))
   }
 
   .panels_c48ade {
@@ -495,6 +507,7 @@
   }
 
   .avatar_c19a55,
+  .embedFull__623de,
   .embedImage__623de img,
   .embedMedia__623de,
   .expandedFolderBackground__48112,
@@ -629,6 +642,14 @@
     .upperBadge_cc5dd2 {
       box-shadow: 0 0 0 var(--size-4) var(--bg-0);
       border-radius: 50%
+    }
+
+    .stack_dbd263 {
+      overflow: hidden scroll;
+
+      ::-webkit-scrollbar {
+        display: none
+      }
     }
   }
 }
