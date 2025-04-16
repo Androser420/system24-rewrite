@@ -220,7 +220,7 @@ h3[data-text-variant="heading-xxl/medium"] {
   .bg__960e4,
   .container__01ae2.floating__01ae2,
   .content__908e2,
-  .outer_c0bea0:not([style*=hsla])> :first-child {
+  .content_f75fb0>.outer_c0bea0:not([style*=hsla])> :first-child {
     background: var(--bg-0)
   }
 
