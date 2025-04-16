@@ -242,7 +242,7 @@ h3[data-text-variant="heading-xxl/medium"] {
     color: var(--acc-0) !important
   }
 
-  [fill="rgba(88,101,242,1)"] {
+  [fill="rgba(88,\ 101,\ 242,\ 1)"] {
     fill: var(--green) !important
   }
 
