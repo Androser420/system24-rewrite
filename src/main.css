@@ -486,6 +486,10 @@ h3[data-text-variant="heading-xxl/medium"] {
     margin-top: var(--txt-pad)
   }
 
+  .tutorialContainer__650eb {
+    box-shadow: 0 calc(var(--pad) / -1) var(--size-xs) var(--bg-0)
+  }
+
   .subtitleContainer_f75fb0 {
     margin-bottom: var(--pad)
   }
