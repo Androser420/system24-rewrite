@@ -311,6 +311,10 @@ h3[data-text-variant="heading-xxl/medium"] {
 
   .images-light[style*=hsla] {
     --background-surface-highest: color-mix(in oklab, var(--neutral-1) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+    --header-primary: var(--txt-3);
+    --interactive-active: var(--txt-3);
+    --interactive-muted: var(--txt-1);
+    --text-normal: var(--txt-3);
 
     .defaultColor__4bd52,
     .pronounsText__63ed3,
