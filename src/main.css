@@ -64,7 +64,8 @@
   background: var(--bg-0)
 }
 
-h3[data-text-variant="heading-xxl/medium"] {
+.heading-xxl\/extrabold_cf4812,
+.heading-xxl\/medium_cf4812 {
   font-family: asciid;
   font-size: 50px;
   font-weight: 400
@@ -90,6 +91,7 @@ h3[data-text-variant="heading-xxl/medium"] {
   .theme-light,
   .theme-midnight {
     --app-border-frame: var(--border-color);
+    --background-accent: var(--bg-3);
     --background-base-low: var(--bg-1);
     --background-base-lower: var(--bg-1);
     --background-base-lowest: var(--bg-1);
@@ -113,6 +115,7 @@ h3[data-text-variant="heading-xxl/medium"] {
     --bg-brand: var(--brand-500);
     --bg-mod-subtle: var(--bg-2);
     --bg-surface-raised: var(--bg-1);
+    --black: none;
     --blurple-50: var(--brand-500);
     --border-faint: transparent;
     --border-normal: var(--border-color);
@@ -126,6 +129,9 @@ h3[data-text-variant="heading-xxl/medium"] {
     --button-danger-background-active: var(--red-530);
     --button-danger-background-disabled: var(--red-430);
     --button-danger-background-hover: var(--red-500);
+    --button-filled-brand-inverted-text: var(--txt-1);
+    --button-filled-white-background: var(--txt-1);
+    --button-filled-white-text: var(--bg-1);
     --button-outline-danger-background: var(--bg-1);
     --button-outline-danger-background-active: var(--red-530);
     --button-outline-danger-background-hover: var(--red-500);
@@ -141,6 +147,7 @@ h3[data-text-variant="heading-xxl/medium"] {
     --button-secondary-background-hover: var(--bg-3);
     --button-secondary-text: var(--txt-1);
     --card-primary-bg: var(--bg-1);
+    --chat-resize-handle-width: var(--pad);
     --divider-subtle: var(--border-color);
     --green-360: var(--green);
     --green-430: var(--green);
@@ -159,6 +166,8 @@ h3[data-text-variant="heading-xxl/medium"] {
     --interactive-normal: var(--txt-2);
     --modal-background: var(--bg-1);
     --modal-footer-background: var(--bg-0);
+    --plum-23: var(--bg-2);
+    --primary-200: var(--txt-1);
     --primary-500: var(--bg-2);
     --primary-800: var(--bg-0);
     --red-400: var(--pink);
@@ -166,6 +175,7 @@ h3[data-text-variant="heading-xxl/medium"] {
     --red-460: var(--pink-1);
     --red-500: var(--pink-1);
     --red-530: var(--pink-2);
+    --redesign-button-overlay-alpha-text: var(--txt-1);
     --scrollbar-auto-thumb: var(--bg-1);
     --scrollbar-auto-track: transparent;
     --scrollbar-thin-thumb: var(--bg-1);
@@ -189,6 +199,7 @@ h3[data-text-variant="heading-xxl/medium"] {
   }
 
   .grabber_a562c8,
+  .gradientBackground__11664,
   .headerEllipseBackdrop_f37cb1,
   .headerGlass_f37cb1 {
     display: none
@@ -211,6 +222,7 @@ h3[data-text-variant="heading-xxl/medium"] {
   .container_c8ffbb,
   .container_fb64c9,
   .contentRegionScroller__23e6b,
+  .gradientContainer_bfe55a,
   .headerEllipseForeground_f37cb1,
   .homeWrapper__0920e,
   .layer__960e4,
@@ -218,6 +230,8 @@ h3[data-text-variant="heading-xxl/medium"] {
   .members_c8ffbb,
   .nowPlayingColumn__133bf,
   .outer_bf1984,
+  .pageBody__41ed7,
+  .panel__5dec7,
   .panels_c48ade,
   .privateChannels__35e86,
   .resizeHandle__01ae2,
@@ -240,6 +254,12 @@ h3[data-text-variant="heading-xxl/medium"] {
   .wrapper_ef3116,
   .wrapper_fc8177 {
     background: none
+  }
+
+  .container__0b563,
+  .header__0b563,
+  .page_c791b2 {
+    background: none !important
   }
 
   .bg__960e4,
@@ -302,15 +322,27 @@ h3[data-text-variant="heading-xxl/medium"] {
 
   .bannerColor_fb7f94,
   .bannerVisible_f37cb1 .name_f37cb1,
+  .base__2b1f5,
+  .button_c6e099,
   .childWrapperNoHoverBg__6e9f8,
   .circleIconButton__5bc7e,
   .controlIcon_cf09d8,
-  .iconBadge__650eb,
+  .experimentDark_f1ceac,
+  .experimentDark_f1ceac .centerIcon_f1ceac,
+  .header_c6e099,
+  .iconBadge__650eb:not(.isCurrentUserConnected__650eb),
   .images-dark[style*=hsla] .menuItemColor_af7fb7,
   .images-dark[style*=hsla] .themeColor_fb7f94,
   .images-light[style*=hsla] .themeColor_fb7f94,
+  .premiumStreamIcon__30845,
+  .qualityIndicatorFullQuality__30845,
+  .returnButtonText__0b563,
   .wrapper_cf09d8 {
     color: var(--txt-1)
+  }
+
+  .emptyChannelIcon__00de6 path {
+    fill: var(--txt-1)
   }
 
   .images-light[style*=hsla] {
@@ -349,12 +381,17 @@ h3[data-text-variant="heading-xxl/medium"] {
     fill: var(--txt-dark)
   }
 
+  .floating__01ae2 {
+    filter: unset
+  }
+
   .sectionDivider__35e86,
   .sectionDivider__629e4,
   .separator_b3f026 {
     height: var(--border-width)
   }
 
+  .callContainer_cb9592,
   .channelTextArea__74017,
   .chat_f75fb0[data-has-border=true],
   .container__01ae2,
@@ -380,7 +417,8 @@ h3[data-text-variant="heading-xxl/medium"] {
 
   .applicationStore_f07d62,
   .bar_c38106,
-  .callContainer_cb9592,
+  .container__01ae2>.container__9293f,
+  .container__0b563,
   .container__133bf,
   .container__2637a,
   .container__551b0,
@@ -388,6 +426,8 @@ h3[data-text-variant="heading-xxl/medium"] {
   .content_f75fb0>.outer_c0bea0,
   .form_f75fb0,
   .guilds_c48ade,
+  .header__0b563,
+  .header_c791b2,
   .itemCard__7e549,
   .membersWrap_c8ffbb,
   .messagesWrapper__36d07,
@@ -395,7 +435,10 @@ h3[data-text-variant="heading-xxl/medium"] {
   .privateChannels__35e86,
   .searchResultsWrap_a9e706,
   .shop__6db1d,
-  .subtitleContainer_f75fb0 {
+  .subtitleContainer_f75fb0,
+  [data-has-border=false] .callContainer_cb9592,
+  [data-has-border=true] .root_bfe55a> :first-child,
+  [data-has-border=true] .subtitleContainer__49508 {
     border: var(--border-width) solid var(--border-color);
     border-radius: var(--panel-roundness);
     transition: border-color var(--border-transition);
@@ -409,6 +452,12 @@ h3[data-text-variant="heading-xxl/medium"] {
     }
   }
 
+  #vc-spotify-player,
+  .divider__5126c,
+  .vc-spotify-lyrics {
+    border-width: var(--border-width)
+  }
+
   .itemCard__7e549:hover {
     border-color: var(--txt-2) !important
   }
@@ -419,15 +468,12 @@ h3[data-text-variant="heading-xxl/medium"] {
     border-top: transparent
   }
 
-  .divider__5126c {
-    border-width: var(--border-width)
-  }
-
   .backdrop__8a7fc,
   .members_c8ffbb,
   .scroller__23746,
   .scroller__36d07,
-  .scroller__629e4 {
+  .scroller__629e4,
+  .wrapper_cb9592 .callContainer_cb9592 {
     border-radius: var(--panel-roundness)
   }
 
@@ -468,6 +514,48 @@ h3[data-text-variant="heading-xxl/medium"] {
     height: var(--custom-channel-textarea-text-area-height)
   }
 
+  [data-has-border=true] {
+    .root_bfe55a {
+      height: calc(100% - var(--custom-channel-header-height)) !important;
+
+      .videoWrapper__6981d {
+        width: 100% !important
+      }
+
+      .root__6981d {
+        overflow: hidden
+      }
+
+      > :first-child,
+      .bottomControls_bfe55a {
+        position: relative;
+        top: calc(var(--border-width) * 2 + var(--pad) + var(--custom-channel-header-height))
+      }
+
+      .topControls_bfe55a {
+        opacity: unset !important;
+        transform: none !important
+      }
+    }
+
+    .resizeHandle__4b144 {
+      z-index: 1;
+      height: var(--pad);
+      bottom: calc(calc(calc(var(--border-width) + var(--pad)) * 2) / -1)
+    }
+
+    .wrapper_cb9592 {
+      margin-bottom: calc(calc(var(--border-width) + var(--pad)) * 2)
+    }
+
+    &:has(.fullScreen_cb9592),
+    &:has(.noChat_cb9592) {
+      .root_bfe55a {
+        max-height: calc(100% - var(--custom-channel-header-height) - var(--pad) - calc(var(--border-width)*3))
+      }
+    }
+  }
+
   .applicationStore_f07d62,
   .bar_c38106,
   .chat_f75fb0,
@@ -498,6 +586,8 @@ h3[data-text-variant="heading-xxl/medium"] {
     box-shadow: 0 calc(var(--pad) / -1) var(--size-xs) var(--bg-0)
   }
 
+  .container__01ae2>.container__9293f,
+  .header__0b563,
   .subtitleContainer_f75fb0 {
     margin-bottom: var(--pad)
   }
@@ -543,6 +633,15 @@ h3[data-text-variant="heading-xxl/medium"] {
     }
   }
 
+  .newMessagesBar__0f481,
+  .scroller__36d07 {
+    top: var(--txt-pad)
+  }
+
+  .newMessagesBar__0f481 {
+    right: var(--space-xs)
+  }
+
   .typing_b88801 {
     bottom: 0;
     left: 0;
@@ -554,19 +653,26 @@ h3[data-text-variant="heading-xxl/medium"] {
   }
 
   .bar_c38106::after,
+  .container__01ae2>.container__9293f::after,
+  .container__0b563::after,
   .container__133bf::after,
   .container__2637a::after,
   .container__551b0::after,
   .container_a592e1::after,
   .content_f75fb0>.outer_c0bea0::after,
   .form_f75fb0::after,
+  .header__0b563::after,
+  .header_c791b2::after,
   .membersWrap_c8ffbb::after,
   .messagesWrapper__36d07::after,
   .panels_c48ade::after,
   .privateChannels__35e86::after,
   .searchResultsWrap_a9e706::after,
   .subtitleContainer_f75fb0::after,
-  .wrapper_ef3116::after {
+  .wrapper_ef3116::after,
+  [data-has-border=false] .callContainer_cb9592::after,
+  [data-has-border=true] .root_bfe55a> :first-child::after,
+  [data-has-border=true] .subtitleContainer__49508::after {
     background-color: var(--bg-0);
     color: var(--txt-3);
     display: block;
@@ -602,7 +708,9 @@ h3[data-text-variant="heading-xxl/medium"] {
     }
   }
 
+  .callContainer_cb9592,
   .chat_f75fb0,
+  .container__01ae2,
   .container__133bf,
   .container__2637a,
   .cooldownWrapper_b21699,
@@ -628,12 +736,21 @@ h3[data-text-variant="heading-xxl/medium"] {
     content: "user"
   }
 
-  .subtitleContainer_f75fb0::after {
+  .container__01ae2>.container__9293f::after,
+  .header__0b563::after,
+  .header_c791b2::after,
+  .subtitleContainer_f75fb0::after,
+  [data-has-border=true] .subtitleContainer__49508::after {
     content: "channel"
   }
 
   .messagesWrapper__36d07::after {
     content: "messages"
+  }
+
+  [data-has-border=false] .callContainer_cb9592::after,
+  [data-has-border=true] .root_bfe55a> :first-child::after {
+    content: "call"
   }
 
   .form_f75fb0::after {
@@ -796,7 +913,6 @@ h3[data-text-variant="heading-xxl/medium"] {
       width: var(--size-24)
     }
 
-    .gradientBackground__11664,
     .title__85643,
     .winButtonsWithDivider_c38106::before {
       display: none
@@ -831,7 +947,9 @@ h3[data-text-variant="heading-xxl/medium"] {
 
     .enabled__67645:hover,
     .gradientBackground__11664,
-    .redGlow__67645 {
+    .redGlow__67645,
+    .vc-spotify-button:hover,
+    .vc-spotify-shuffle-on {
       background: none !important
     }
 
