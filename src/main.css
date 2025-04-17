@@ -259,6 +259,10 @@ h3[data-text-variant="heading-xxl/medium"] {
     }
   }
 
+  .lightIcon__36dee {
+    background-color: var(--txt-0)
+  }
+
   .sectionDivider__35e86,
   .sectionDivider__629e4,
   .separator_aa63ab,
@@ -836,5 +840,74 @@ h3[data-text-variant="heading-xxl/medium"] {
       border-radius: 50%;
       box-shadow: 0 0 0 var(--size-4) var(--bg-0)
     }
+  }
+}
+
+.theme-light {
+
+  .bannerColor_fb7f94,
+  .controlIcon_cf09d8,
+  .iconBadge__650eb,
+  .images-dark[style*=hsla] .menuItemColor_af7fb7,
+  .images-dark[style*=hsla] .themeColor_fb7f94,
+  .images-light[style*=hsla] .themeColor_fb7f94,
+  .wrapper_cf09d8 {
+    color: var(--txt-dark) !important
+  }
+
+  .images-light[style*=hsla] {
+    --header-primary: var(--txt-1);
+    --interactive-active: var(--txt-1);
+    --interactive-muted: var(--txt-3);
+    --text-normal: var(--txt-1);
+
+    .defaultColor__4bd52,
+    .pronounsText__63ed3,
+    .text-sm\/normal_cf4812,
+    .userTagDiscriminator__63ed3,
+    .userTagUsername__63ed3 {
+      color: var(--txt-1) !important
+    }
+
+    .dotSpacer__63ed3 {
+      background: var(--txt-1)
+    }
+
+    .menuItemColor_af7fb7 {
+      color: var(--txt-dark)
+    }
+  }
+
+  .images-dark[style*=hsla] {
+    --header-primary: var(--txt-3);
+    --text-normal: var(--txt-3);
+
+    .editor_a99829 {
+      --channel-text-area-placeholder: var(--txt-3)
+    }
+  }
+
+  &:root {
+    --bg-0: oklch(97.6% 0 0);
+    --bg-1: oklch(92.6% 0 0);
+    --bg-2: oklch(87.6% 0 0);
+    --bg-3: oklch(82.6% 0 0);
+    --hover: oklch(40% 0 0 / 0.1);
+    --active: oklch(40% 0 0 / 0.2);
+    --txt-0: oklch(100% 0 0);
+    --txt-1: oklch(30% 0 0);
+    --txt-2: oklch(50% 0 0);
+    --txt-3: oklch(70% 0 0);
+    --pink: oklch(57% 0.13 0);
+    --pink-1: oklch(50% 0.13 0);
+    --pink-2: oklch(43% 0.13 0);
+    --purple: oklch(57% 0.13 300);
+    --purple-1: oklch(50% 0.13 300);
+    --purple-2: oklch(43% 0.13 300);
+    --cyan: oklch(57% 0.13 200);
+    --yellow: oklch(71% 0.13 80);
+    --green: oklch(57% 0.13 160);
+    --green-1: oklch(50% 0.13 160);
+    --green-2: oklch(43% 0.13 160)
   }
 }
