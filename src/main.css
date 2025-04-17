@@ -730,6 +730,14 @@ h3[data-text-variant="heading-xxl/medium"] {
         border-radius: 25%;
         transition: border-radius 0.1s ease-out
       }
+
+      .stack_dbd263 {
+        overflow: hidden scroll
+      }
+
+      ::-webkit-scrollbar {
+        display: none
+      }
     }
 
     .bar_c38106 {
@@ -819,14 +827,6 @@ h3[data-text-variant="heading-xxl/medium"] {
     .upperBadge_cc5dd2 {
       border-radius: 50%;
       box-shadow: 0 0 0 var(--size-4) var(--bg-0)
-    }
-
-    .stack_dbd263 {
-      overflow: hidden scroll;
-
-      ::-webkit-scrollbar {
-        display: none
-      }
     }
   }
 }
