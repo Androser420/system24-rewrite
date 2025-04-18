@@ -92,8 +92,8 @@
   .theme-midnight {
     --app-border-frame: var(--border-color);
     --background-accent: var(--bg-3);
-    --background-base-low: var(--bg-1);
-    --background-base-lower: var(--bg-1);
+    --background-base-low: var(--bg-3);
+    --background-base-lower: var(--bg-2);
     --background-base-lowest: var(--bg-1);
     --background-feedback-critical: var(--pink-2);
     --background-floating: var(--bg-2);
@@ -120,6 +120,7 @@
     --border-faint: transparent;
     --border-normal: var(--border-color);
     --border-subtle: transparent !important;
+    --brand-260: var(--acc-0);
     --brand-360: var(--txt-link);
     --brand-500: var(--acc-0);
     --brand-530: var(--acc-0);
@@ -141,6 +142,12 @@
     --button-outline-danger-text: var(--txt-1);
     --button-outline-danger-text-active: var(--text-dark);
     --button-outline-danger-text-hover: var(--txt-dark);
+    --button-outline-positive-border: var(--green-360);
+    --button-outline-positive-border-active: var(--green-530);
+    --button-outline-positive-border-hover: var(--green-430);
+    --button-outline-positive-text: var(--txt-1);
+    --button-outline-positive-text-active: var(--txt-1);
+    --button-outline-positive-text-hover: var(--txt-1);
     --button-secondary-background: var(--bg-2);
     --button-secondary-background-active: var(--txt-3);
     --button-secondary-background-disabled: var(--bg-1);
@@ -175,7 +182,7 @@
     --red-460: var(--pink-1);
     --red-500: var(--pink-1);
     --red-530: var(--pink-2);
-    --redesign-button-overlay-alpha-text: var(--txt-1);
+    --redesign-button-overlay-alpha-text: var(--txt-0);
     --scrollbar-auto-thumb: var(--bg-1);
     --scrollbar-auto-track: transparent;
     --scrollbar-thin-thumb: var(--bg-1);
@@ -211,7 +218,6 @@
   .channelAttachmentArea_b77158,
   .channelChatWrapper_cb9592,
   .channelTextArea_f75fb0,
-  .chatContent_f75fb0,
   .chat_f75fb0,
   .children__9293f::after,
   .container__01ae2,
@@ -263,7 +269,7 @@
   }
 
   .bg__960e4,
-  .container__01ae2.floating__01ae2,
+  .chatContent_f75fb0,
   .content__908e2,
   .content_f75fb0>.outer_c0bea0:not([style*=hsla])> :first-child {
     background: var(--bg-0)
@@ -320,9 +326,14 @@
     }
   }
 
+  .categoryText_d02962,
+  .iconWrapper__6eb54 {
+    color: var(--txt-0)
+  }
+
   .bannerColor_fb7f94,
   .bannerVisible_f37cb1 .name_f37cb1,
-  .base__2b1f5:not(.numberBadge__2b1f5),
+  .base__2b1f5:not([style*=status-danger], .textBadge__2b1f5),
   .button_c6e099,
   .childWrapperNoHoverBg__6e9f8,
   .circleIconButton__5bc7e,
@@ -339,6 +350,10 @@
   .returnButtonText__0b563,
   .wrapper_cf09d8 {
     color: var(--txt-1)
+  }
+
+  .newChannel__599fa {
+    color: var(--white-500) !important
   }
 
   .emptyChannelIcon__00de6 path {
@@ -526,8 +541,8 @@
         overflow: hidden
       }
 
-      .bottomControls_bfe55a,
-      > :first-child {
+      > :first-child,
+      .bottomControls_bfe55a {
         position: relative;
         top: calc(var(--border-width) * 2 + var(--pad) + var(--custom-channel-header-height))
       }
@@ -978,7 +993,7 @@
   .images-dark[style*=hsla] .themeColor_fb7f94,
   .images-light[style*=hsla] .themeColor_fb7f94,
   .wrapper_cf09d8 {
-    color: var(--txt-dark) !important
+    color: var(--white-500) !important
   }
 
   .images-light[style*=hsla] {
