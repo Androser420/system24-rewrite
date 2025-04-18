@@ -322,7 +322,7 @@
 
   .bannerColor_fb7f94,
   .bannerVisible_f37cb1 .name_f37cb1,
-  .base__2b1f5,
+  .base__2b1f5:not(.numberBadge__2b1f5),
   .button_c6e099,
   .childWrapperNoHoverBg__6e9f8,
   .circleIconButton__5bc7e,
@@ -526,8 +526,8 @@
         overflow: hidden
       }
 
-      > :first-child,
-      .bottomControls_bfe55a {
+      .bottomControls_bfe55a,
+      > :first-child {
         position: relative;
         top: calc(var(--border-width) * 2 + var(--pad) + var(--custom-channel-header-height))
       }
@@ -765,8 +765,16 @@
     content: "search"
   }
 
-  .content_f75fb0>.outer_c0bea0::after {
-    content: "profile"
+  .content_f75fb0>.outer_c0bea0 {
+    --background-surface-high: none;
+
+    > :first-child {
+      border: var(--bg-0) var(--txt-pad) solid
+    }
+
+    &::after {
+      content: "profile"
+    }
   }
 
   .container__133bf {
