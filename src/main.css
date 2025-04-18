@@ -176,6 +176,7 @@
     --plum-23: var(--bg-2);
     --primary-200: var(--txt-1);
     --primary-500: var(--bg-2);
+    --primary-630: var(--bg-2);
     --primary-800: var(--bg-0);
     --red-400: var(--pink);
     --red-430: var(--pink);
@@ -271,7 +272,8 @@
   .bg__960e4,
   .chatContent_f75fb0,
   .content__908e2,
-  .content_f75fb0>.outer_c0bea0:not([style*=hsla])> :first-child {
+  .content_f75fb0>.outer_c0bea0:not([style*=hsla])> :first-child,
+  .noChat__49094 {
     background: var(--bg-0)
   }
 
@@ -430,6 +432,7 @@
     border: unset
   }
 
+  .activityPanelContainer__49094,
   .applicationStore_f07d62,
   .bar_c38106,
   .container__01ae2>.container__9293f,
@@ -571,6 +574,17 @@
     }
   }
 
+  .entryPointButtonContainer_f75fb0 {
+    align-content: center;
+    margin: var(--border-width);
+    padding-right: var(--space-md);
+
+    >button {
+      max-height: var(--custom-channel-textarea-text-area-height);
+      min-height: unset
+    }
+  }
+
   .applicationStore_f07d62,
   .bar_c38106,
   .chat_f75fb0,
@@ -581,6 +595,7 @@
   }
 
   .channelTextArea_f75fb0.channelTextArea__74017,
+  .entryPointButtonContainer_f75fb0>button,
   .scroller__99e7c {
     margin: unset
   }
@@ -667,6 +682,7 @@
     right: 0
   }
 
+  .activityPanelContainer__49094::after,
   .bar_c38106::after,
   .container__01ae2>.container__9293f::after,
   .container__0b563::after,
@@ -715,12 +731,15 @@
     min-width: 0
   }
 
-  .container__551b0 {
-    position: relative;
+  .activityPanelContainer__49094,
+  .container__133bf,
+  .container__551b0,
+  .container_a592e1 {
+    position: relative
+  }
 
-    &::after {
-      content: "discover"
-    }
+  .container__551b0::after {
+    content: "discover"
   }
 
   .callContainer_cb9592,
@@ -763,6 +782,10 @@
     content: "messages"
   }
 
+  .activityPanelContainer__49094::after {
+    content: "activity"
+  }
+
   [data-has-border=false] .callContainer_cb9592::after,
   [data-has-border=true] .root_bfe55a> :first-child::after {
     content: "call"
@@ -792,17 +815,12 @@
     }
   }
 
-  .container__133bf {
-    position: relative;
-
-    &::after {
-      content: "friends"
-    }
+  .container__133bf::after {
+    content: "friends"
   }
 
   .container_a592e1 {
     padding: var(--space-xs);
-    position: relative;
 
     &:has(.outerContainer_e1147e)::after {
       content: "apps"
