@@ -9,7 +9,7 @@
   --corner-text: "system24-rewrite";
   --pad: 16px;
   --txt-pad: 10px;
-  --panel-roundness: 0;
+  --panel-roundness: 20px;
   --selected: var(--active);
   --txt-dark: var(--bg-0);
   --txt-link: var(--cyan);
@@ -29,7 +29,9 @@
   --reply-hover-overlay: var(--hover);
   --font-primary: var(--font), "gg mono", monospace;
   --font-display: var(--font), "gg mono", monospace;
-  --font-code: var(--font), "gg mono", monospace
+  --font-code: var(--font), "gg mono", monospace;
+  --searchbar-min-width: 120px;
+  --searchbar-max-width: 244px
 }
 
 :scope {
@@ -149,6 +151,7 @@
     --interactive-normal: var(--txt-2);
     --modal-background: var(--bg-1);
     --modal-footer-background: var(--bg-0);
+    --opacity-blurple-24: color-mix(in srgb, var(--brand-500) 25%, transparent);
     --plum-23: var(--bg-2);
     --primary-200: var(--txt-1);
     --primary-500: var(--bg-2);
@@ -200,15 +203,18 @@
   .container__01ae2,
   .container__133bf,
   .container__2637a,
+  .container__34c2c,
   .container__551b0,
   .container__7d20c,
   .container_c8ffbb,
+  .container_f369db,
   .container_fb64c9,
   .contentRegionScroller__23e6b,
   .gradientContainer_bfe55a,
   .headerEllipseForeground_f37cb1,
   .homeWrapper__0920e,
   .layer__960e4,
+  .mainCard_f369db,
   .member_c8ffbb,
   .members_c8ffbb,
   .nowPlayingColumn__133bf,
@@ -232,6 +238,7 @@
   .themedBackground__74017,
   .themed__9293f,
   .vc-spotify-lyrics,
+  .wrapper__44df5,
   .wrapper_cb9592,
   .wrapper_d852db,
   .wrapper_ef3116,
@@ -248,7 +255,6 @@
   .bg__960e4,
   .chatContent_f75fb0,
   .content__908e2,
-  .content_f75fb0>.outer_c0bea0:not([style*=hsla])> :first-child,
   .noChat__49094 {
     background: var(--bg-0)
   }
@@ -267,11 +273,12 @@
     background-color: var(--txt-0)
   }
 
+  .divider_ee23ac,
   .sectionDivider__35e86,
   .sectionDivider__629e4,
   .separator_aa63ab,
   .separator_b3f026 {
-    background: var(--border-normal)
+    background: var(--border-color)
   }
 
   .mentioned__5126c::before {
@@ -305,8 +312,9 @@
   }
 
   .categoryText_d02962,
-  .iconWrapper__6eb54 {
-    color: var(--txt-0)
+  .iconWrapper__6eb54,
+  :has(a) .iconWrapper__926d7 {
+    color: var(--txt-0) !important
   }
 
   .bannerColor_fb7f94,
@@ -320,12 +328,15 @@
   .experimentDark_f1ceac .centerIcon_f1ceac,
   .header_c6e099,
   .iconBadge__650eb:not(.isCurrentUserConnected__650eb),
+  .iconTierOne__97677,
+  .iconTierTwo__97677,
   .images-dark[style*=hsla] .menuItemColor_af7fb7,
   .images-dark[style*=hsla] .themeColor_fb7f94,
   .images-light[style*=hsla] .themeColor_fb7f94,
   .premiumStreamIcon__30845,
   .qualityIndicatorFullQuality__30845,
   .returnButtonText__0b563,
+  .unread__3b95d,
   .wrapper_cf09d8 {
     color: var(--txt-1)
   }
@@ -378,14 +389,15 @@
     filter: unset
   }
 
+  .divider_ee23ac,
   .sectionDivider__35e86,
   .sectionDivider__629e4,
   .separator_b3f026 {
     height: var(--border-width)
   }
 
-  &.theme-midnight .subtitleContainer_f75fb0,
   &.theme-midnight .content_f75fb0,
+  &.theme-midnight .subtitleContainer_f75fb0,
   .callContainer_cb9592,
   .channelTextArea__74017,
   .chat_f75fb0[data-has-border=true],
@@ -406,7 +418,8 @@
   .searchHeader_f3b986,
   .searchResult__02a39,
   .sidebarList_c48ade,
-  .stackedBars__74017:not(:last-child) {
+  .stackedBars__74017:not(:last-child),
+  .wrapper__44df5 {
     border: unset
   }
 
@@ -420,6 +433,7 @@
   .container__2637a,
   .container__551b0,
   .container_a592e1,
+  .container_f369db,
   .content_f75fb0>.outer_c0bea0,
   .form_f75fb0,
   .guilds_c48ade,
@@ -450,7 +464,9 @@
   }
 
   #vc-spotify-player,
+  .container__34c2c,
   .divider__5126c,
+  .root__49fc1,
   .vc-spotify-lyrics {
     border-width: var(--border-width)
   }
@@ -466,7 +482,9 @@
   }
 
   .backdrop__8a7fc,
+  .mainCard_f369db,
   .members_c8ffbb,
+  .root__49fc1,
   .scroller__23746,
   .scroller__36d07,
   .scroller__629e4,
@@ -474,8 +492,13 @@
     border-radius: var(--panel-roundness)
   }
 
-  .animatedContainer_f37cb1 {
+  .animatedContainer_f37cb1,
+  .header_d5f35b {
     border-radius: var(--panel-roundness) var(--panel-roundness) 0 0
+  }
+
+  .footer__49fc1 {
+    border-radius: 0 0 var(--panel-roundness) var(--panel-roundness)
   }
 
   .container__9293f,
@@ -505,6 +528,12 @@
   .searchResultsWrap_a9e706,
   .shop__6db1d {
     height: auto
+  }
+
+  .searchBar__97492 {
+    min-width: var(--searchbar-min-width);
+    width: unset !important;
+    max-width: var(--searchbar-max-width)
   }
 
   .container__37e49 {
@@ -567,6 +596,7 @@
   .applicationStore_f07d62,
   .bar_c38106,
   .chat_f75fb0,
+  .container__01ae2,
   .container__133bf,
   .container_a592e1,
   .shop__6db1d {
@@ -575,7 +605,8 @@
 
   .channelTextArea_f75fb0.channelTextArea__74017,
   .entryPointButtonContainer_f75fb0>button,
-  .scroller__99e7c {
+  .scroller__99e7c,
+  .wrapper__44df5 {
     margin: unset
   }
 
@@ -634,6 +665,10 @@
     overflow: hidden
   }
 
+  .lowerBadge_cc5dd2 {
+    z-index: unset
+  }
+
   :has(.typing_b88801) {
 
     .jumpToPresentBar__0f481,
@@ -652,13 +687,18 @@
   }
 
   .typing_b88801 {
-    bottom: 0;
     left: 0;
     margin: calc(var(--custom-chat-input-margin-bottom)/-1 + var(--pad)/-1 + var(--border-width)*2/-1) var(--space-xs);
     order: -1;
     overflow: hidden;
     position: relative;
     right: 0
+  }
+
+  .bottom__7aaec,
+  .typing_b88801,
+  .unreadBottom__629e4 {
+    bottom: 0
   }
 
   .activityPanelContainer__49094::after,
@@ -669,6 +709,7 @@
   .container__2637a::after,
   .container__551b0::after,
   .container_a592e1::after,
+  .container_f369db::after,
   .content_f75fb0>.outer_c0bea0::after,
   .form_f75fb0::after,
   .header__0b563::after,
@@ -761,6 +802,10 @@
     content: "messages"
   }
 
+  .container_f369db::after {
+    content: "forum"
+  }
+
   .activityPanelContainer__49094::after {
     content: "activity"
   }
@@ -786,7 +831,8 @@
     --background-surface-high: none;
 
     > :first-child {
-      border: var(--bg-0) var(--txt-pad) solid
+      border: var(--bg-0) var(--txt-pad) solid;
+      border-radius: var(--panel-roundness)
     }
 
     &::after {
@@ -868,7 +914,7 @@
         width: var(--guildbar-avatar-size) !important
       }
 
-      .scroller_ef3116> :nth-child(3),
+      .scroller_ef3116>[style*="40px"],
       foreignObject {
         height: var(--guildbar-avatar-size) !important
       }
