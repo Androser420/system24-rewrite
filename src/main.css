@@ -157,6 +157,7 @@
     --interactive-muted: var(--txt-3);
     --interactive-normal: var(--txt-2);
     --message-reacted-background: color-mix(in srgb, var(--brand-500) 25%, transparent);
+    --message-reacted-text: var(--acc-0);
     --modal-background: var(--bg-1);
     --modal-footer-background: var(--bg-0);
     --opacity-blurple-24: var(--message-reacted-background);
