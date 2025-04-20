@@ -603,7 +603,8 @@
   .chat_f75fb0,
   .container__133bf,
   .container_a592e1,
-  .shop__6db1d {
+  .shop__6db1d,
+  :has(.threadSidebarOpen_f75fb0) .container__01ae2 {
     margin: var(--pad)
   }
 
