@@ -154,9 +154,10 @@
     --interactive-hover: var(--txt-1);
     --interactive-muted: var(--txt-3);
     --interactive-normal: var(--txt-2);
+    --message-reacted-background: color-mix(in srgb, var(--brand-500) 25%, transparent);
     --modal-background: var(--bg-1);
     --modal-footer-background: var(--bg-0);
-    --opacity-blurple-24: color-mix(in srgb, var(--brand-500) 25%, transparent);
+    --opacity-blurple-24: var(--message-reacted-background);
     --plum-23: var(--bg-2);
     --primary-200: var(--txt-1);
     --primary-500: var(--bg-2);
@@ -556,8 +557,8 @@
         overflow: hidden
       }
 
-      .bottomControls_bfe55a,
-      > :first-child {
+      > :first-child,
+      .bottomControls_bfe55a {
         position: relative;
         top: calc(var(--border-width) * 2 + var(--pad) + var(--custom-channel-header-height))
       }
