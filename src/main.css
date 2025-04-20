@@ -70,6 +70,7 @@
   .theme-light,
   .theme-midnight {
     --app-border-frame: var(--border-color);
+    --autocomplete-bg: var(--bg-1);
     --background-accent: var(--bg-3);
     --background-base-low: var(--bg-3);
     --background-base-lower: var(--bg-2);
