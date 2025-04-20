@@ -94,6 +94,7 @@
     --background-tertiary: var(--bg-0);
     --bg-brand: var(--brand-500);
     --bg-mod-subtle: var(--bg-2);
+    --bg-surface-overlay: var(--bg-1);
     --bg-surface-raised: var(--bg-1);
     --black: none;
     --blurple-50: var(--brand-500);
