@@ -564,8 +564,8 @@
         overflow: hidden
       }
 
-      .bottomControls_bfe55a,
-      > :first-child {
+      > :first-child,
+      .bottomControls_bfe55a {
         position: relative;
         top: calc(var(--border-width) * 2 + var(--pad) + var(--custom-channel-header-height))
       }
@@ -905,6 +905,10 @@
 }
 
 #app-mount {
+  div {
+    --vc-spotify-green: var(--acc-0)
+  }
+
   #vc-spotify-progress-bar {
 
     .barFill_a562c8,
