@@ -564,8 +564,8 @@
         overflow: hidden
       }
 
-      > :first-child,
-      .bottomControls_bfe55a {
+      .bottomControls_bfe55a,
+      > :first-child {
         position: relative;
         top: calc(var(--border-width) * 2 + var(--pad) + var(--custom-channel-header-height))
       }
@@ -994,8 +994,8 @@
       background: var(--offline-dot) !important
     }
 
-    &::has(rect[fill="#9147ff"])::after {
-      background: var(--streaming-dot)
+    &:has(rect[fill="#9147ff"])::after {
+      background: var(--streaming-dot) !important
     }
   }
 
