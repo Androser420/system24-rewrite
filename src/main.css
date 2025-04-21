@@ -156,6 +156,8 @@
     --interactive-hover: var(--txt-1);
     --interactive-muted: var(--txt-3);
     --interactive-normal: var(--txt-2);
+    --mention-background: var(--mention-bg);
+    --mention-foreground: var(--mention-txt);
     --message-reacted-background: color-mix(in srgb, var(--brand-500) 25%, transparent);
     --message-reacted-text: var(--acc-0);
     --modal-background: var(--bg-1);
@@ -560,8 +562,8 @@
         overflow: hidden
       }
 
-      .bottomControls_bfe55a,
-      > :first-child {
+      > :first-child,
+      .bottomControls_bfe55a {
         position: relative;
         top: calc(var(--border-width) * 2 + var(--pad) + var(--custom-channel-header-height))
       }
