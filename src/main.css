@@ -564,8 +564,8 @@
         overflow: hidden
       }
 
-      > :first-child,
-      .bottomControls_bfe55a {
+      .bottomControls_bfe55a,
+      > :first-child {
         position: relative;
         top: calc(var(--border-width) * 2 + var(--pad) + var(--custom-channel-header-height))
       }
@@ -1027,34 +1027,11 @@
   }
 
   .visual-refresh {
-    .bar_c38106 {
-      border: unset;
-      margin: unset;
-      padding: unset;
-
-      &::after {
-        display: none
-      }
-
-      &::before {
-        color: var(--txt-2);
-        content: var(--corner-text);
-        font-weight: 500;
-        margin-left: var(--space-sm)
-      }
-    }
-
-    .trailing_c38106 {
-      gap: unset
-    }
-
-    .title__85643,
-    .winButtonsWithDivider_c38106::before {
-      display: none
-    }
-
-    .content_c48ade {
-      margin-top: unset
+    .bar_c38106::before {
+      color: var(--txt-2);
+      content: var(--corner-text);
+      font-weight: 500;
+      margin-left: var(--space-sm)
     }
   }
 }
@@ -1063,7 +1040,9 @@
   body {
     --custom-app-top-bar-height: 0px
   }
+}
 
+@container scope style(--titlebar: hidden) or style(--titlebar: old) {
   .visual-refresh {
     .bar_c38106 {
       border: unset;
@@ -1083,11 +1062,7 @@
     .content_c48ade {
       margin-top: unset
     }
-  }
-}
 
-@container scope style(--titlebar: hidden) or style(--titlebar: old) {
-  .visual-refresh {
     .trailing_c38106 {
       z-index: 100;
       gap: var(--space-xs);
