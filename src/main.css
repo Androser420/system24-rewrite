@@ -343,7 +343,7 @@
   .iconBadge__650eb:not(.isCurrentUserConnected__650eb),
   .iconTierOne__97677,
   .iconTierTwo__97677,
-  .images-dark[style*=hsla] .menuItemColor_af7fb7,
+  .images-dark[style*=hsla] .menuItemColor_ce8328,
   .images-dark[style*=hsla] .themeColor_fb7f94,
   .images-light[style*=hsla] .themeColor_fb7f94,
   .premiumStreamIcon__30845,
@@ -381,7 +381,7 @@
       background: var(--txt-dark)
     }
 
-    .menuItemColor_af7fb7 {
+    .menuItemColor_ce8328 {
       color: var(--txt-3)
     }
   }
@@ -1170,7 +1170,7 @@
   .bannerColor_fb7f94,
   .controlIcon_cf09d8,
   .iconBadge__650eb,
-  .images-dark[style*=hsla] .menuItemColor_af7fb7,
+  .images-dark[style*=hsla] .menuItemColor_ce8328,
   .images-dark[style*=hsla] .themeColor_fb7f94,
   .images-light[style*=hsla] .themeColor_fb7f94,
   .wrapper_cf09d8 {
@@ -1195,7 +1195,7 @@
       background: var(--txt-1)
     }
 
-    .menuItemColor_af7fb7 {
+    .menuItemColor_ce8328 {
       color: var(--txt-dark)
     }
   }
