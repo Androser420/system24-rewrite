@@ -1,6 +1,7 @@
 @import url('https://raw.githubusercontent.com/Androser420/system24-rewrite/refs/heads/main/src/main.css');
 
 :root {
-  --old-layout: off;
-  --unrounding: on
+  --layout: old; /* new | old */
+  --titlebar: old; /* new | old | hidden */
+  --unrounding: on /* on | off */
 }

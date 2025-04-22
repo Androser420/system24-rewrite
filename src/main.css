@@ -564,8 +564,8 @@
         overflow: hidden
       }
 
-      .bottomControls_bfe55a,
-      > :first-child {
+      > :first-child,
+      .bottomControls_bfe55a {
         position: relative;
         top: calc(var(--border-width) * 2 + var(--pad) + var(--custom-channel-header-height))
       }
@@ -1015,15 +1015,104 @@
   }
 }
 
-@property --old-layout {
-  syntax: "on | off";
+@property --titlebar {
+  syntax: "new | old | hidden";
   inherits: false;
-  initial-value: off
+  initial-value: new
 }
 
-@container scope style(--old-layout: on) {
+@container scope style(--titlebar: old) {
   body {
-    --custom-app-top-bar-height: var(--size-xl);
+    --custom-app-top-bar-height: var(--size-xl)
+  }
+
+  .visual-refresh {
+    .bar_c38106 {
+      border: unset;
+      margin: unset;
+      padding: unset;
+
+      &::after {
+        display: none
+      }
+
+      &::before {
+        color: var(--txt-2);
+        content: var(--corner-text);
+        font-weight: 500;
+        margin-left: var(--space-sm)
+      }
+    }
+
+    .trailing_c38106 {
+      gap: unset
+    }
+
+    .title__85643,
+    .winButtonsWithDivider_c38106::before {
+      display: none
+    }
+
+    .content_c48ade {
+      margin-top: unset
+    }
+  }
+}
+
+@container scope style(--titlebar: hidden) {
+  body {
+    --custom-app-top-bar-height: 0px
+  }
+
+  .visual-refresh {
+    .bar_c38106 {
+      border: unset;
+      margin: unset;
+      padding: unset;
+
+      &::after {
+        display: none
+      }
+    }
+
+    .title__85643,
+    .winButtonsWithDivider_c38106::before {
+      display: none
+    }
+
+    .content_c48ade {
+      margin-top: unset
+    }
+  }
+}
+
+@container scope style(--titlebar: hidden) or style(--titlebar: old) {
+  .visual-refresh {
+    .trailing_c38106 {
+      z-index: 100;
+      gap: var(--space-xs);
+      position: absolute;
+      right: calc(var(--space-xs) + var(--pad) + var(--border-width));
+      height: var(--space-32);
+      width: var(--space-32);
+      margin-top: calc(var(--custom-channel-header-height) + var(--custom-app-top-bar-height) + calc(var(--pad) * 2) + calc(var(--border-width) * 2))
+    }
+
+    .title_f75fb0,
+    :not(.title_f75fb0)>.upperContainer__9293f {
+      width: calc(100% - calc(calc(var(--space-xs) + var(--space-32)) * 2))
+    }
+  }
+}
+
+@property --layout {
+  syntax: "new | old";
+  inherits: false;
+  initial-value: new
+}
+
+@container scope style(--layout: old) {
+  body {
     --guildbar-avatar-size: 48px;
     --old-icon-size: 30px
   }
@@ -1060,27 +1149,6 @@
       }
     }
 
-    .bar_c38106 {
-      border: unset;
-      margin: unset;
-      padding: unset;
-
-      &::after {
-        display: none
-      }
-
-      &::before {
-        color: var(--txt-2);
-        content: var(--corner-text);
-        font-weight: 500;
-        margin-left: var(--space-sm)
-      }
-    }
-
-    .trailing_c38106 {
-      gap: unset
-    }
-
     .expandedFolderBackground__48112 {
       left: var(--size-sm) !important
     }
@@ -1102,15 +1170,6 @@
     .circleIcon__5bc7e {
       height: var(--size-24);
       width: var(--size-24)
-    }
-
-    .title__85643,
-    .winButtonsWithDivider_c38106::before {
-      display: none
-    }
-
-    .content_c48ade {
-      margin-top: unset
     }
 
     .scrollerSpacer__36d07 {
@@ -1148,7 +1207,7 @@
   }
 }
 
-@container scope style(--old-layout: on) and style(--unrounding: on) {
+@container scope style(--layout: old) and style(--unrounding: on) {
   .visual-refresh {
     .avatar__37e49 {
       scale: unset;
