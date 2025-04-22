@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
-@import url('https://fonts.cdnfonts.com/css/asciid');
+@import url(https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap);
+@import url(https://fonts.cdnfonts.com/css/asciid);
 
 :root {
   --font: "DM Mono";
@@ -464,7 +464,7 @@
   .shop__6db1d,
   .subtitleContainer_f75fb0,
   [data-has-border=false] .callContainer_cb9592,
-  [data-has-border=true] .root_bfe55a> :first-child,
+  [data-has-border=true] .root_bfe55a>:first-child,
   [data-has-border=true] .subtitleContainer__49508 {
     border: var(--border-width) solid var(--border-color);
     border-radius: var(--panel-roundness);
@@ -565,7 +565,7 @@
       }
 
       .bottomControls_bfe55a,
-      > :first-child {
+      >:first-child {
         position: relative;
         top: calc(var(--border-width) * 2 + var(--pad) + var(--custom-channel-header-height))
       }
@@ -748,7 +748,7 @@
   .subtitleContainer_f75fb0::after,
   .wrapper_ef3116::after,
   [data-has-border=false] .callContainer_cb9592::after,
-  [data-has-border=true] .root_bfe55a> :first-child::after,
+  [data-has-border=true] .root_bfe55a>:first-child::after,
   [data-has-border=true] .subtitleContainer__49508::after {
     background-color: var(--bg-0);
     color: var(--txt-3);
@@ -850,7 +850,7 @@
   }
 
   [data-has-border=false] .callContainer_cb9592::after,
-  [data-has-border=true] .root_bfe55a> :first-child::after {
+  [data-has-border=true] .root_bfe55a>:first-child::after {
     content: "call"
   }
 
@@ -869,7 +869,7 @@
   .content_f75fb0>.outer_c0bea0 {
     --background-surface-high: none;
 
-    > :first-child {
+    >:first-child {
       border: var(--bg-0) var(--txt-pad) solid;
       border-radius: var(--panel-roundness)
     }
@@ -940,7 +940,7 @@
   initial-value: off
 }
 
-@container scope style(--unrounding: on) {
+@container scope style(--unrounding:on) {
 
   *,
   ::-webkit-scrollbar-thumb {
@@ -952,16 +952,16 @@
   .svg__44b0c rect[mask='url(#:rhi:)'],
   .avatar__20a53 .status_a423bd,
   .svg_cc5dd2>mask,
-  rect[fill='#40a258'] {
+  rect[fill="#40a258"],
+  rect[fill="#d83a41"] {
     display: none
   }
 
-  .mask__68edb,
-  .svg__2338f,
-  .svg__44b0c {
-    >foreignObject {
-      mask: none
-    }
+  .mask__68edb>foreignObject,
+  .svg__2338f>foreignObject,
+  .svg__44b0c>foreignObject,
+  [mask*="decoration-status"] {
+    mask: none
   }
 
   .container__1ce5d:has(.status_a423bd)::after,
@@ -1021,7 +1021,7 @@
   initial-value: new
 }
 
-@container scope style(--titlebar: old) {
+@container scope style(--titlebar:old) {
   body {
     --custom-app-top-bar-height: var(--size-xl)
   }
@@ -1036,13 +1036,13 @@
   }
 }
 
-@container scope style(--titlebar: hidden) {
+@container scope style(--titlebar:hidden) {
   body {
     --custom-app-top-bar-height: 0px
   }
 }
 
-@container scope style(--titlebar: hidden) or style(--titlebar: old) {
+@container scope style(--titlebar:hidden) or style(--titlebar:old) {
   .visual-refresh {
     .bar_c38106 {
       border: unset;
@@ -1086,7 +1086,7 @@
   initial-value: new
 }
 
-@container scope style(--layout: old) {
+@container scope style(--layout:old) {
   body {
     --guildbar-avatar-size: 48px;
     --old-icon-size: 30px
@@ -1163,7 +1163,7 @@
     }
 
     .avatar__37e49 {
-      scale: 0.8
+      scale: .8
     }
 
     .enabled__67645:hover,
@@ -1182,13 +1182,13 @@
   }
 }
 
-@container scope style(--layout: old) and style(--unrounding: on) {
+@container scope style(--layout:old) and style(--unrounding:on) {
   .visual-refresh {
     .avatar__37e49 {
       scale: unset;
 
       .avatarStack__44b0c {
-        scale: 0.8
+        scale: .8
       }
 
       &::after {
