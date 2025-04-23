@@ -340,7 +340,7 @@
   .experimentDark_f1ceac,
   .experimentDark_f1ceac .centerIcon_f1ceac,
   .header_c6e099,
-  .iconBadge__650eb:not(.isCurrentUserConnected__650eb),
+  .iconBadge__650eb,
   .iconTierOne__97677,
   .iconTierTwo__97677,
   .images-dark[style*=hsla] .menuItemColor_ce8328,
@@ -354,7 +354,8 @@
     color: var(--txt-1)
   }
 
-  .newChannel__599fa {
+  .newChannel__599fa,
+  .isCurrentUserConnected__650eb {
     color: var(--white-500) !important
   }
 
@@ -492,9 +493,9 @@
   }
 
   .embedFull__623de {
-    border-bottom: transparent;
-    border-right: transparent;
-    border-top: transparent
+    border-bottom: var(--border-faint);
+    border-right: var(--border-faint);
+    border-top: var(--border-faint)
   }
 
   .backdrop__8a7fc,
@@ -1203,7 +1204,6 @@
 
   .bannerColor_fb7f94,
   .controlIcon_cf09d8,
-  .iconBadge__650eb,
   .images-dark[style*=hsla] .menuItemColor_ce8328,
   .images-dark[style*=hsla] .themeColor_fb7f94,
   .images-light[style*=hsla] .themeColor_fb7f94,
