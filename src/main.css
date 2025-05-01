@@ -1100,13 +1100,14 @@
       foreignObject {
         border-radius: 50%;
         mask: unset;
-        transition: border-radius 0.1s ease-out;
-        width: var(--guildbar-avatar-size) !important
+        transition: border-radius 0.1s ease-out
       }
 
       .stack_dbd263>[style*="40px"],
+      .wrapper_cc5dd2,
       foreignObject {
-        height: var(--guildbar-avatar-size) !important
+        height: var(--guildbar-avatar-size) !important;
+        width: var(--guildbar-avatar-size) !important
       }
 
       .selected__91816 foreignObject,
@@ -1125,7 +1126,7 @@
       }
     }
 
-    .expandedFolderBackground__48112 {
+    .folderGroupBackground__48112 {
       left: var(--size-sm) !important
     }
 
