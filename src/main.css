@@ -568,8 +568,8 @@
         overflow: hidden
       }
 
-      > :first-child,
-      .bottomControls_bfe55a {
+      .bottomControls_bfe55a,
+      > :first-child {
         position: relative;
         top: calc(var(--border-width) * 2 + var(--pad) + var(--custom-channel-header-height))
       }
@@ -1035,7 +1035,9 @@
       color: var(--txt-2);
       content: var(--corner-text);
       font-weight: 500;
-      margin-left: var(--space-sm)
+      margin-left: var(--space-sm);
+      left: 0;
+      position: absolute
     }
   }
 }
@@ -1068,9 +1070,7 @@
     }
 
     .trailing_c38106 {
-
-      > :nth-child(2),
-      > :first-child {
+      > :not(.winButtons_c38106) {
         z-index: 100;
         gap: var(--space-xs);
         position: absolute;
@@ -1080,7 +1080,7 @@
         margin-top: calc(var(--custom-channel-header-height) + var(--custom-app-top-bar-height) + calc(var(--pad) * 2) + calc(var(--border-width) * 2))
       }
 
-      > :nth-child(2) {
+      >.anchor_edefb8 {
         right: calc(var(--space-xs) + var(--pad) + var(--border-width) + var(--space-xs) + var(--space-32))
       }
     }
