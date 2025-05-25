@@ -468,7 +468,7 @@
   .shop__6db1d,
   .subtitleContainer_f75fb0,
   [data-has-border=false] .callContainer_cb9592,
-  [data-has-border=true] .root_bfe55a> :first-child,
+  [data-has-border=true] .root_bfe55a>:first-child,
   [data-has-border=true] .subtitleContainer__49508 {
     border: var(--border-width) solid var(--border-color);
     border-radius: var(--panel-roundness);
@@ -569,7 +569,7 @@
       }
 
       .bottomControls_bfe55a,
-      > :first-child {
+      >:first-child {
         position: relative;
         top: calc(var(--border-width) * 2 + var(--pad) + var(--custom-channel-header-height))
       }
@@ -752,7 +752,7 @@
   .subtitleContainer_f75fb0::after,
   .wrapper_ef3116::after,
   [data-has-border=false] .callContainer_cb9592::after,
-  [data-has-border=true] .root_bfe55a> :first-child::after,
+  [data-has-border=true] .root_bfe55a>:first-child::after,
   [data-has-border=true] .subtitleContainer__49508::after {
     background-color: var(--bg-0);
     color: var(--txt-3);
@@ -854,7 +854,7 @@
   }
 
   [data-has-border=false] .callContainer_cb9592::after,
-  [data-has-border=true] .root_bfe55a> :first-child::after {
+  [data-has-border=true] .root_bfe55a>:first-child::after {
     content: "call"
   }
 
@@ -873,7 +873,7 @@
   .content_f75fb0>.outer_c0bea0 {
     --background-surface-high: none;
 
-    > :first-child {
+    >:first-child {
       border: var(--bg-0) var(--txt-pad) solid;
       border-radius: var(--panel-roundness)
     }
@@ -1044,7 +1044,7 @@
 
 @container scope style(--titlebar:hidden) {
   body {
-    --custom-app-top-bar-height: 0
+    --custom-app-top-bar-height: 0px
   }
 }
 
@@ -1070,7 +1070,7 @@
     }
 
     .trailing_c38106 {
-      > :not(.winButtons_c38106) {
+      >:not(.winButtons_c38106) {
         z-index: 100;
         gap: var(--space-xs);
         position: absolute;
@@ -1080,7 +1080,7 @@
         margin-top: calc(var(--custom-channel-header-height) + var(--custom-app-top-bar-height) + calc(var(--pad) * 2) + calc(var(--border-width) * 2))
       }
 
-      >.anchor_edefb8 {
+      >.recentsIcon_c99c29 {
         right: calc(var(--space-xs) + var(--pad) + var(--border-width) + var(--space-xs) + var(--space-32))
       }
     }
@@ -1176,7 +1176,7 @@
     }
 
     .avatar__37e49 {
-      scale: 0.8
+      scale: .8
     }
 
     .colorable_f1ceac,
@@ -1202,7 +1202,7 @@
       scale: unset;
 
       .avatarStack__44b0c {
-        scale: 0.8
+        scale: .8
       }
 
       &::after {
