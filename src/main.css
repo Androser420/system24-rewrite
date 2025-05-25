@@ -956,8 +956,8 @@
   .svg__44b0c rect[mask='url(#:rhi:)'],
   .avatar__20a53 .status_a423bd,
   .svg_cc5dd2>mask,
-  rect[fill="#40a258"],
-  rect[fill="#d83a41"] {
+  rect[fill="#43a25a"],
+  rect[fill="#d83a42"] {
     display: none
   }
 
@@ -980,17 +980,17 @@
     border: 2px solid var(--bg-0)
   }
 
-  .wrapper__44b0c:has(rect[fill="#40a258"])::after,
+  .wrapper__44b0c:has(rect[fill="#43a25a"])::after,
   .container__1ce5d:has([style*="64,\ 162,\ 88"])::after {
     background: var(--online-dot) !important
   }
 
   .wrapper__44b0c {
-    &:has(rect[fill="#d83a41"])::after {
+    &:has(rect[fill="#d83a42"])::after {
       background: var(--dnd-dot) !important
     }
 
-    &:has(rect[fill="#cc954c"])::after {
+    &:has(rect[fill="#ca9654"])::after {
       background: var(--idle-dot) !important
     }
 
@@ -1088,6 +1088,20 @@
     .title_f75fb0,
     :not(.title_f75fb0)>.upperContainer__9293f {
       width: calc(100% - calc(calc(var(--space-xs) + var(--space-32)) * 2))
+    }
+  }
+}
+
+@container scope style(--titlebar:new) {
+  .visual-refresh {
+    :has(.standardSidebarView__23e6b) .bar_c38106 {
+      border: unset;
+      margin: unset;
+      padding: unset;
+
+      &::after {
+        display: none
+      }
     }
   }
 }
