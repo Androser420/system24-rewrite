@@ -85,7 +85,7 @@
     --background-mentioned-hover: var(--mention-hover-overlay);
     --background-mod-strong: var(--bg-3);
     --background-mod-subtle: var(--bg-1);
-    --background-modifier-accent: var(--bg-3);
+    --background-modifier-accent: var(--border-color);
     --background-modifier-active: var(--active);
     --background-modifier-hover: var(--hover);
     --background-modifier-selected: var(--selected);
@@ -1320,89 +1320,83 @@
   }
 }
 
-.theme-dark {
-  &:root {
-    --bg-0: oklch(28% 0 0);
-    --bg-1: oklch(32% 0 0);
-    --bg-2: oklch(36% 0 0);
-    --bg-3: oklch(40% 0 0);
-    --hover: oklch(54% 0 0/0.1);
-    --active: oklch(54% 0 0/0.2);
-    --txt-0: oklch(92% 0 0);
-    --txt-1: oklch(84% 0 0);
-    --txt-2: oklch(66% 0 0);
-    --txt-3: oklch(48% 0 0);
-    --mention-bg: color-mix(in oklch, var(--acc-0), transparent 90%);
-    --mention-overlay: color-mix(in oklch, var(--acc-0), transparent 90%);
-    --mention-hover-overlay: color-mix(in oklch, var(--acc-0), transparent 95%);
-    --pink: oklch(73% 0.12 0);
-    --pink-1: oklch(63% 0.12 0);
-    --pink-2: oklch(53% 0.12 0);
-    --purple: oklch(73% 0.12 300);
-    --purple-1: oklch(63% 0.12 300);
-    --purple-2: oklch(53% 0.12 300);
-    --cyan: oklch(73% 0.12 200);
-    --yellow: oklch(78% 0.12 80);
-    --green: oklch(73% 0.12 160);
-    --green-1: oklch(63% 0.12 160);
-    --green-2: oklch(53% 0.12 160)
-  }
+.theme-dark:root {
+  --bg-0: oklch(28% 0 0);
+  --bg-1: oklch(32% 0 0);
+  --bg-2: oklch(36% 0 0);
+  --bg-3: oklch(40% 0 0);
+  --hover: oklch(54% 0 0/0.1);
+  --active: oklch(54% 0 0/0.2);
+  --txt-0: oklch(92% 0 0);
+  --txt-1: oklch(84% 0 0);
+  --txt-2: oklch(66% 0 0);
+  --txt-3: oklch(48% 0 0);
+  --mention-bg: color-mix(in oklch, var(--acc-0), transparent 90%);
+  --mention-overlay: color-mix(in oklch, var(--acc-0), transparent 90%);
+  --mention-hover-overlay: color-mix(in oklch, var(--acc-0), transparent 95%);
+  --pink: oklch(73% 0.12 0);
+  --pink-1: oklch(63% 0.12 0);
+  --pink-2: oklch(53% 0.12 0);
+  --purple: oklch(73% 0.12 300);
+  --purple-1: oklch(63% 0.12 300);
+  --purple-2: oklch(53% 0.12 300);
+  --cyan: oklch(73% 0.12 200);
+  --yellow: oklch(78% 0.12 80);
+  --green: oklch(73% 0.12 160);
+  --green-1: oklch(63% 0.12 160);
+  --green-2: oklch(53% 0.12 160)
 }
 
-.theme-darker {
-  &:root {
-    --bg-0: oklch(19% 0 0);
-    --bg-1: oklch(23% 0 0);
-    --bg-2: oklch(27% 0 0);
-    --bg-3: oklch(31% 0 0);
-    --hover: oklch(54% 0 0/0.1);
-    --active: oklch(54% 0 0/0.2);
-    --txt-0: oklch(90% 0 0);
-    --txt-1: oklch(80% 0 0);
-    --txt-2: oklch(60% 0 0);
-    --txt-3: oklch(40% 0 0);
-    --mention-bg: color-mix(in oklch, var(--acc-0), transparent 90%);
-    --mention-overlay: color-mix(in oklch, var(--acc-0), transparent 90%);
-    --mention-hover-overlay: color-mix(in oklch, var(--acc-0), transparent 95%);
-    --pink: oklch(73% 0.12 0);
-    --pink-1: oklch(63% 0.12 0);
-    --pink-2: oklch(53% 0.12 0);
-    --purple: oklch(73% 0.12 300);
-    --purple-1: oklch(63% 0.12 300);
-    --purple-2: oklch(53% 0.12 300);
-    --cyan: oklch(73% 0.12 200);
-    --yellow: oklch(78% 0.12 80);
-    --green: oklch(73% 0.12 160);
-    --green-1: oklch(63% 0.12 160);
-    --green-2: oklch(53% 0.12 160)
-  }
+.theme-darker:root {
+  --bg-0: oklch(19% 0 0);
+  --bg-1: oklch(23% 0 0);
+  --bg-2: oklch(27% 0 0);
+  --bg-3: oklch(31% 0 0);
+  --hover: oklch(54% 0 0/0.1);
+  --active: oklch(54% 0 0/0.2);
+  --txt-0: oklch(90% 0 0);
+  --txt-1: oklch(80% 0 0);
+  --txt-2: oklch(60% 0 0);
+  --txt-3: oklch(40% 0 0);
+  --mention-bg: color-mix(in oklch, var(--acc-0), transparent 90%);
+  --mention-overlay: color-mix(in oklch, var(--acc-0), transparent 90%);
+  --mention-hover-overlay: color-mix(in oklch, var(--acc-0), transparent 95%);
+  --pink: oklch(73% 0.12 0);
+  --pink-1: oklch(63% 0.12 0);
+  --pink-2: oklch(53% 0.12 0);
+  --purple: oklch(73% 0.12 300);
+  --purple-1: oklch(63% 0.12 300);
+  --purple-2: oklch(53% 0.12 300);
+  --cyan: oklch(73% 0.12 200);
+  --yellow: oklch(78% 0.12 80);
+  --green: oklch(73% 0.12 160);
+  --green-1: oklch(63% 0.12 160);
+  --green-2: oklch(53% 0.12 160)
 }
 
-.theme-midnight {
-  &:root {
-    --bg-0: oklch(12% 0 0);
-    --bg-1: oklch(16% 0 0);
-    --bg-2: oklch(20% 0 0);
-    --bg-3: oklch(24% 0 0);
-    --hover: oklch(54% 0 0/0.08);
-    --active: oklch(54% 0 0/0.16);
-    --txt-0: oklch(88% 0 0);
-    --txt-1: oklch(76% 0 0);
-    --txt-2: oklch(58% 0 0);
-    --txt-3: oklch(38% 0 0);
-    --mention-bg: color-mix(in oklch, var(--acc-0), transparent 88%);
-    --mention-overlay: color-mix(in oklch, var(--acc-0), transparent 88%);
-    --mention-hover-overlay: color-mix(in oklch, var(--acc-0), transparent 93%);
-    --pink: oklch(73% 0.12 0);
-    --pink-1: oklch(63% 0.12 0);
-    --pink-2: oklch(53% 0.12 0);
-    --purple: oklch(73% 0.12 300);
-    --purple-1: oklch(63% 0.12 300);
-    --purple-2: oklch(53% 0.12 300);
-    --cyan: oklch(73% 0.12 200);
-    --yellow: oklch(78% 0.12 80);
-    --green: oklch(73% 0.12 160);
-    --green-1: oklch(63% 0.12 160);
-    --green-2: oklch(53% 0.12 160)
-  }
+.theme-midnight:root {
+  --bg-0: oklch(12% 0 0);
+  --bg-1: oklch(16% 0 0);
+  --bg-2: oklch(20% 0 0);
+  --bg-3: oklch(24% 0 0);
+  --hover: oklch(54% 0 0/0.08);
+  --active: oklch(54% 0 0/0.16);
+  --txt-0: oklch(88% 0 0);
+  --txt-1: oklch(76% 0 0);
+  --txt-2: oklch(58% 0 0);
+  --txt-3: oklch(38% 0 0);
+  --mention-bg: color-mix(in oklch, var(--acc-0), transparent 88%);
+  --mention-overlay: color-mix(in oklch, var(--acc-0), transparent 88%);
+  --mention-hover-overlay: color-mix(in oklch, var(--acc-0), transparent 93%);
+  --pink: oklch(73% 0.12 0);
+  --pink-1: oklch(63% 0.12 0);
+  --pink-2: oklch(53% 0.12 0);
+  --purple: oklch(73% 0.12 300);
+  --purple-1: oklch(63% 0.12 300);
+  --purple-2: oklch(53% 0.12 300);
+  --cyan: oklch(73% 0.12 200);
+  --yellow: oklch(78% 0.12 80);
+  --green: oklch(73% 0.12 160);
+  --green-1: oklch(63% 0.12 160);
+  --green-2: oklch(53% 0.12 160)
 }
