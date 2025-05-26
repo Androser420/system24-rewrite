@@ -36,7 +36,10 @@
   --custom-status-size: 8px;
   --custom-status-offset: 4px;
   --custom-status-border: 2px;
-  --custom-status-border-color: var(--bg-0)
+  --custom-status-border-color: var(--bg-0);
+  --status-multiplier: 1;
+  --popout-status-multiplier: 2;
+  --modal-status-multiplier: 3
 }
 
 :scope {
@@ -145,6 +148,9 @@
     --elevation-medium: none;
     --elevation-low: none;
     --elevation-stroke: none;
+    --final-custom-status-border: calc(var(--custom-status-border) * var(--status-multiplier));
+    --final-custom-status-offset: calc(var(--custom-status-offset) * var(--status-multiplier));
+    --final-custom-status-size: calc(var(--custom-status-size) * var(--status-multiplier));
     --green-360: var(--green);
     --green-430: var(--green);
     --green-500: var(--green-1);
@@ -888,15 +894,11 @@
 
   .outer_c0bea0,
   .user-profile-popout {
-    --custom-status-size: 16px;
-    --custom-status-offset: 8px;
-    --custom-status-border: 4px
+    --status-multiplier: var(--popout-status-multiplier)
   }
 
   .user-profile-modal {
-    --custom-status-size: 24px;
-    --custom-status-offset: 12px;
-    --custom-status-border: 6px
+    --status-multiplier: var(--modal-status-multiplier)
   }
 
   .user-profile-popout,
@@ -998,11 +1000,11 @@
     content: "";
     display: block;
     position: absolute;
-    height: var(--custom-status-size);
-    width: var(--custom-status-size);
-    bottom: calc(var(--custom-status-offset) / -1);
-    right: calc(var(--custom-status-offset) / -1);
-    border: var(--custom-status-border) solid var(--custom-status-border-color)
+    height: var(--final-custom-status-size);
+    width: var(--final-custom-status-size);
+    bottom: calc(var(--final-custom-status-offset) / -1);
+    right: calc(var(--final-custom-status-offset) / -1);
+    border: var(--final-custom-status-border) solid var(--custom-status-border-color)
   }
 
   .wrapper__44b0c:has(rect[fill="#43a25a"])::after,
