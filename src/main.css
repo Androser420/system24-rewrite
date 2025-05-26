@@ -33,7 +33,10 @@
   --font-code: var(--font), "gg mono", monospace;
   --searchbar-min-width: 120px;
   --searchbar-max-width: 244px;
-  --custom-status-size: 8px
+  --custom-status-size: 8px;
+  --custom-status-offset: 4px;
+  --custom-status-border: 2px;
+  --custom-status-border-color: var(--bg-0)
 }
 
 :scope {
@@ -883,6 +886,28 @@
     }
   }
 
+  .outer_c0bea0,
+  .user-profile-popout {
+    --custom-status-size: 16px;
+    --custom-status-offset: 8px;
+    --custom-status-border: 4px
+  }
+
+  .user-profile-modal {
+    --custom-status-size: 24px;
+    --custom-status-offset: 12px;
+    --custom-status-border: 6px
+  }
+
+  .user-profile-popout,
+  .user-profile-modal {
+    --custom-status-border-color: var(--background-surface-high);
+
+    &[style*=hsla] {
+      --custom-status-border-color: var(--background-surface-highest)
+    }
+  }
+
   .container__133bf::after {
     content: "friends"
   }
@@ -975,9 +1000,9 @@
     position: absolute;
     height: var(--custom-status-size);
     width: var(--custom-status-size);
-    bottom: -4px;
-    right: -4px;
-    border: 2px solid var(--bg-0)
+    bottom: calc(var(--custom-status-offset) / -1);
+    right: calc(var(--custom-status-offset) / -1);
+    border: var(--custom-status-border) solid var(--custom-status-border-color)
   }
 
   .wrapper__44b0c:has(rect[fill="#43a25a"])::after,
