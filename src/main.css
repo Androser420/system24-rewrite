@@ -892,8 +892,7 @@
     }
   }
 
-  .outer_c0bea0,
-  .user-profile-popout {
+  .outer_c0bea0 {
     --status-multiplier: var(--popout-status-multiplier)
   }
 
